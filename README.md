@@ -1,6 +1,7 @@
 Game project
 
-This game is based in JavaScript specifically in p5.Js Library.
+This game is mainly based in JavaScript specifically with p5.Js Library.
+sdfdsfdsf
 
 
  
