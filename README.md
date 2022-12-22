@@ -1,2 +1,6 @@
-# Game-project-part-3b-
+Game project
+
+This game is based in JavaScript specifically in p5.Js Library.
+
+
  
