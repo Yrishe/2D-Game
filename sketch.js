@@ -28,6 +28,8 @@ var trees_x;
 var clouds_x;
 //montains declared
 var mountains_x;
+// cameraPosX declared 
+var cameraPosX;
 
 function setup() {
     createCanvas(1024, 576);
@@ -61,6 +63,8 @@ function setup() {
     clouds_x = [100, 400, 800]
 
     mountains_x = [200, 400, 600, 800, 1000]
+
+    cameraPosX = 0;
 }
 
 function draw() {
@@ -75,6 +79,10 @@ function draw() {
     noStroke();
     fill(0, 155, 0);
     rect(0, floorPos_y, width, height - floorPos_y);
+
+    push();
+    translate(-cameraPosX, 0);
+
 
     //next step
     //draw mountains
@@ -107,6 +115,7 @@ function draw() {
         ellipse(clouds_x[i] + 100, floorPos_y - 360, 110, 80);
         ellipse(clouds_x[i] + 50, floorPos_y - 360, 120, 90);
     }
+
 
     if (collectable.isFound == false) {
         fill(255, 255, 100);
@@ -206,6 +215,8 @@ function draw() {
 
 
     }
+
+    pop();
 
     ///////////INTERACTION CODE//////////
     //Put conditional statements to move the game character below here
