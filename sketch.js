@@ -31,6 +31,8 @@ var mountains_x;
 // cameraPosX declared 
 var cameraPosX;
 
+var d;
+
 function setup() {
     createCanvas(1024, 576);
     floorPos_y = height * 3 / 4;
@@ -65,11 +67,16 @@ function setup() {
     mountains_x = [200, 400, 600, 800, 1000]
 
     cameraPosX = 0;
+
+    d = 0;
 }
 
 function draw() {
 
-    ///////////DRAWING CODE//////////
+    ///////////DRAWING CODE/////////
+    for (i = 0; i < width; i++) {
+        cameraPosX += ;
+    }
 
     background(100, 155, 255); //fill the sky blue
 
@@ -80,8 +87,12 @@ function draw() {
     fill(0, 155, 0);
     rect(0, floorPos_y, width, height - floorPos_y);
 
+
     push();
-    translate(-cameraPosX, 0);
+    //this line makes the background move constantly to the right
+
+    d += 0.2;
+    translate(-cameraPosX + d, 0);
 
 
     //next step
@@ -126,9 +137,10 @@ function draw() {
     //draw the canyon
     fill(150);
     rect(canyon.x_pos, canyon.y_pos, canyon.width, canyon.height);
+    //pop();
 
 
-    //the game character
+    // the game character
     if (isLeft && isFalling) {
         // add your jumping-left code
 
