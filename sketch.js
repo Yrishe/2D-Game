@@ -22,16 +22,12 @@ var isFound;
 var collectable;
 var canyon;
 
-//trees_x declared 
+
 var trees_x;
-//clouds declared
 var clouds_x;
-//montains declared
 var mountains_x;
-// cameraPosX declared 
 var cameraPosX;
 
-var d;
 
 function setup() {
     createCanvas(1024, 576);
@@ -39,9 +35,7 @@ function setup() {
     gameChar_x = width / 2;
     gameChar_y = floorPos_y;
 
-//    isLeft = false;
     isLeft = false;
-//    isRight = false;
     isRight = false;
     isFalling = false;
     isPlummeting = false;
@@ -66,21 +60,19 @@ function setup() {
 
     clouds_x = [100, 400, 800]
 
-    mountains_x = [200, 400, 600, 800, 1000]
+    mountains_x = [80, 200, 600, 1000, 1400, 1800, 2200]
 
     cameraPosX = 0;
 
-    d = 0;
+
+
 }
 
 function draw() {
 
     ///////////DRAWING CODE/////////
-//    //next step: make the value of cameraPosX change continually  
-//    for (i = 0; i < width; i++) {
-//        cameraPosX += ;
-//    }
-    cameraPosX = gameChar_x - width/2;
+
+    cameraPosX = gameChar_x - width / 2;
 
     background(100, 155, 255); //fill the sky blue
 
@@ -92,21 +84,15 @@ function draw() {
     rect(0, floorPos_y, width, height - floorPos_y);
 
 
-    
-    //this line makes the background move constantly to the right
 
-//    d += 0.2;
-//    translate(-cameraPosX + d, 0);
-    //testing 
+    //this line makes the background move constantly to the right
     push();
     translate(-cameraPosX, 0);
 
-
-    //next step
     //draw mountains
     for (var i = 0; i < mountains_x.length; i++) {
         fill(169, 100, 169);
-        triangle(mountains_x[i - 1], floorPos_y, mountains_x[i], 150, mountains_x[i + 1], floorPos_y);
+        triangle(mountains_x[i] - 150, floorPos_y, mountains_x[i], 150, mountains_x[i] + 150, floorPos_y);
     }
 
     //draw the canyon
@@ -144,7 +130,7 @@ function draw() {
         ellipse(collectable.x_pos - 40, collectable.y_pos - 100, collectable.size, collectable.size);
     }
 
-   
+
 
 
     // the game character
@@ -239,30 +225,20 @@ function draw() {
 
     ///////////INTERACTION CODE//////////
     //Put conditional statements to move the game character below here
-    
-    
-//    if (isLeft == true) {
-//        //running left direction speed
-//        gameChar_x -= 5;
-//    }
-//
-//    if (isRight == true) {
-//        //running right direction speed
-//        gameChar_x += 5;
-//    }
+
+
     //running speed and direction
-    if(isLeft){
+    if (isLeft) {
         gameChar_x -= 5;
-    }else if(isRight){
+    } else if (isRight) {
         gameChar_x += 5;
     }
 
+    // falling effect
     if (gameChar_y < floorPos_y) {
-        //falling speed
         gameChar_y += 4;
         isFalling = true;
-    }
-    else {
+    } else {
         isFalling = false;
     }
 
@@ -274,7 +250,7 @@ function draw() {
     }
 
     //collectable item collision
-    if (dist(gameChar_x, gameChar_y, collectable.x_pos - 40, collectable.y_pos - 100) < 20) {
+    if (dist(gameChar_x, gameChar_y, collectable.x_pos - 40, collectable.y_pos - 100) < collectable.size) {
         collectable.isFound = true;
     }
 
@@ -282,12 +258,6 @@ function draw() {
     //canyon collision
     if ((gameChar_x > canyon.x_pos && gameChar_x < canyon.x_pos + canyon.width) && gameChar_y >= floorPos_y) {
         isPlummeting = true;
-        //        gameChar_y += 3;
-        //        
-        //        if(gameChar_y >= floorPos_y)
-        //        {
-        //            gameChar_y += 3;
-        //        }
     }
 
 
