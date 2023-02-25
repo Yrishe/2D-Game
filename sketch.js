@@ -1,9 +1,9 @@
 /*
 
-The Game Project 5 - Multiple Interactables
+The Game Project 6 - Adding game mechanics
 
 Ps: I'd love to code a better character and a cooler background, but I haven't had
-enough time to spend on it. Hope it doesn't affect my grade. 
+enough time to spend on it.  
 */
 
 
