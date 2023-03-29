@@ -1,0 +1,54 @@
+var gameChar_y;
+var gameChar_x;
+var floorPos_y;
+var scrollPos;
+var gameCharacter_world_x;
+var isLeft;
+var isRight;
+var isFalling;
+var isPlummeting;
+var isFound;
+var trees;
+var buildings;
+var clouds_x;
+var collectables;
+var canyons;
+var flagpole;
+var lives;
+var gameObj;
+var jumpSound;
+var fallinSound;
+var bonusSound;
+var levelSound;
+var walkSound;
+var gameOverFont;
+var platforms;
+var enemies;
+
+var walkRight1_Image;
+var walkRight2_Image;
+var walkRight3_Image;
+var walkRight4_Image;
+var walkRight5_Image;
+var walkRight6_Image;
+var walkRight7_Image;
+var walkRight8_Image;
+
+var walkLeft1_Image;
+var walkLeft2_Image;
+var walkLeft3_Image;
+var walkLeft4_Image;
+var walkLeft5_Image;
+var walkLeft6_Image;
+var walkLeft7_Image;
+var walkLeft8_Image;
+
+var standing_Image;
+var jumpRight_Image;
+var jumpLeft_Image;
+var falling_Image;
+var finalFall_Image;
+var prize_Image;
+var enemy_Image;
+
+var step = 0;
