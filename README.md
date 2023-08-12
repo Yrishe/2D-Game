@@ -16,3 +16,5 @@ The character can fall in the canyon in the case of a collision.
 There is a collectable item on the other side of the canyon. 
 
  
+<h2>Screenshot</h2>
+<img width="767" alt="image" src="https://github.com/Yrishe/2D-Game/assets/86082317/230331a6-1929-4779-9914-5abc0f43ea69">
