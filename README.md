@@ -1,4 +1,4 @@
-<h1>Game project</h1>
+<h1>2D Gaming in JS</h1>
 
 This game is mainly based on JavaScript, exploring the p5.js library. 
 
@@ -14,11 +14,13 @@ This game is mainly based on JavaScript, exploring the p5.js library.
  
 <h3> Functions </h3> 
 
-<ul>The character runs in both directions and jumps straightforwardly or while it runs. </ul>
-<ul>The character can fall into the canyon in the case of a collision.</ul>
-<ul>There is a collectable item on the other side of the canyon. </ul>
+<ul>
+ <li>The character runs in both directions and jumps straightforwardly or while it runs. </li>
+ <li>The character can fall into the canyon in the case of a collision.</li>
+ <li>There is a collectable item on the other side of the canyon. </li>
+</ul>
 
-<h3><a href='LICENSE'>License</a></h3>
+<h3><a href='LICENSE.txt'>License</a></h3>
 
 
 <h2>Screenshot</h2>
